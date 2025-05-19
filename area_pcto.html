@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Aggiungi il link a Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -21,7 +21,7 @@
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            position: relative; /* Necessario per il posizionamento assoluto della freccia */
+            position: relative;
         }
 
         .header {
@@ -46,27 +46,37 @@
         }
 
         .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto auto;
-            gap: 25px;
-            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 30px 10px;
         }
 
         .grid-item {
-            border-radius: 12px;
-            padding: 25px;
-            transition: transform 0.3s ease;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 18px;
+            justify-content: space-between;
+            background-color: #f0f8ff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .grid-item:hover {
-            transform: scale(1.08);
+        .grid-item:nth-child(even) {
+            flex-direction: row-reverse;
+            background-color: #e8f4ff;
+        }
+
+        .grid-item img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 20px;
+        }
+
+        .grid-item p {
+            flex: 1;
+            font-size: 16px;
         }
 
         .footer-container {
@@ -95,16 +105,28 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="sitoCompleto.html" class="back-link"><i class="fas fa-arrow-left"></i></a> <!-- Freccia indietro -->
+            <a href="sitoCompleto.html" class="back-link"><i class="fas fa-arrow-left"></i></a>
             ROMAGNOLI LORENZO - 5BM - AS 24/25
         </div>
 
         <div class="grid">
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
+            <!-- Primo blocco: immagine a destra -->
+            <div class="grid-item">
+                <p>Durante il mio percorso PCTO ho avuto l'opportunità di lavorare presso Loccioni, un’azienda all’avanguardia nel campo dell’automazione industriale. L’ambiente di lavoro stimolante e la disponibilità dei tutor aziendali hanno reso l’esperienza altamente formativa.</p>
+                <img src="img/loccioni1.jpg" alt="Loccioni azienda">
+            </div>
+
+            <!-- Secondo blocco: immagine a sinistra -->
+            <div class="grid-item">
+                <img src="img/loccioni2.jpg" alt="Banco prova in costruzione">
+                <p>Insieme al mio gruppo di lavoro abbiamo partecipato alla progettazione e costruzione di un banco prova per testare gli iniettori delle automobili. Questa attività ci ha permesso di applicare le competenze tecniche acquisite a scuola in un contesto reale.</p>
+            </div>
+
+            <!-- Terzo blocco: immagine a destra -->
+            <div class="grid-item">
+                <p>Il banco prova è stato sviluppato con l’obiettivo di garantire precisione e affidabilità nei test. Questa esperienza mi ha permesso di comprendere meglio l’importanza della collaborazione, del problem solving e dell’innovazione in ambito meccanico ed elettronico.</p>
+                <img src="img/loccioni3.jpg" alt="Banco prova finito">
+            </div>
         </div>
 
         <div class="footer-container">
