@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IA</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    .header {
+      font-size: 22px;
+      font-weight: bold;
+      padding: 15px 0;
+      border-bottom: 3px solid #007BFF;
+      color: #007BFF;
+      text-align: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .back-link {
+      position: absolute;
+      left: 20px;
+      font-size: 22px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .grid-item {
+      border-radius: 12px;
+      padding: 25px;
+      background-color: #f0f8ff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.03);
+    }
+
+    .grid-item h2 {
+      color: #007BFF;
+      margin-bottom: 15px;
+    }
+
+    .grid-item p {
+      flex-grow: 1;
+    }
+
+    .grid-item a {
+      margin-top: 15px;
+      display: inline-block;
+      color: #fff;
+      background-color: #007BFF;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .grid-item a:hover {
+      background-color: #0056b3;
+    }
+
+    .footer-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo img {
+      width: 300px;
+      height: auto;
+    }
+
+    .footer {
+      font-size: 0.9em;
+      text-align: right;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="area_professionale.html" class="back-link"><i class="fas fa-arrow-left"></i></a>
+      IA
+    </div>
+
+    <!-- Paragrafo introduttivo -->
+    <p style="padding: 20px; font-size: 1.05em; text-align: justify;">
+      In questa pagina sono presentati due progetti realizzati con <strong>Google Colab</strong>, una piattaforma online che permette di scrivere ed eseguire codice Python direttamente nel browser. I progetti utilizzano dataset reali per analizzare i dati e costruire modelli di <em>machine learning</em>, come la regressione e la classificazione, in modo semplice e interattivo.
+    </p>
+
+    <div class="grid">
+      <div class="grid-item">
+        <h2>Car Crashes dataset</h2>
+        <p>Questo progetto applica la regressione lineare per prevedere il numero totale di incidenti stradali a partire da variabili come eccesso di velocità, alcol, distrazione e assenza di precedenti. Il dataset utilizzato, Car Crashes, fornisce statistiche utili su incidenti automobilistici negli USA. Dopo aver selezionato le feature rilevanti, i dati vengono standardizzati e suddivisi in training e test set. Il modello viene addestrato e valutato tramite l’errore quadratico medio (MSE). Infine, viene calcolata e visualizzata una matrice di confusione classificando i risultati come “Alto” o “Basso”.</p>
+        <a href="https://colab.research.google.com/drive/1heLVGk0Nbg30mOzrRM6RG080Swih7XJL#scrollTo=faKMjMJpA9rw" target="_blank">Visualizza progetto</a>
+      </div>
+
+      <div class="grid-item">
+        <h2>Iris dataset</h2>
+        <p>Questo progetto usa il dataset Iris per creare un modello che riconosce il tipo di fiore usando l’algoritmo K-Nearest Neighbors (KNN). Dopo aver importato le librerie e caricato i dati, si analizzano e si dividono in dati per l’addestramento e per il test. I dati vengono normalizzati per migliorare i risultati. Il modello KNN (con k=5) viene allenato e testato calcolando l’accuratezza e la matrice di confusione. Infine, si prova a cambiare il valore di k per vedere come cambia la precisione del modello.</p>
+        <a href="https://colab.research.google.com/drive/1dMly_WJdZMrJeg0d5nY585GsrzLw52W6#scrollTo=c49X2gMcXtBV" target="_blank">Visualizza progetto</a>
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <div class="logo">
+        <img src="img/logoScuola.png" alt="Logo IIS Marconi Pieralisi">
+      </div>
+      <div class="footer">
+        <p><strong>Indirizzo:</strong> Via Raffaello Sanzio, 8 - 60035 JESI (AN), Italy</p>
+        <p><strong>Telefono:</strong> +39 0731 204550</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
