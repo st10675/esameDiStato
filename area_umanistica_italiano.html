@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Italiano</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Aggiungi il link a Font Awesome -->
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -21,7 +21,7 @@
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            position: relative;
+            position: relative; /* Necessario per il posizionamento assoluto della freccia */
         }
 
         .header {
@@ -46,44 +46,27 @@
         }
 
         .grid {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
             gap: 25px;
-            justify-content: center;
             padding: 30px;
         }
 
         .grid-item {
-            background: #007BFF;
-            color: #fff;
             border-radius: 12px;
-            width: 200px;
-            height: 120px;
+            padding: 25px;
+            transition: transform 0.3s ease;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             font-size: 18px;
-            font-weight: bold;
-            transition: transform 0.3s ease, background 0.3s ease;
         }
 
         .grid-item:hover {
             transform: scale(1.08);
-            background: #0056b3;
-        }
-
-        .grid-item button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: inherit;
-            font-size: inherit;
-            font-weight: inherit;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .footer-container {
@@ -112,20 +95,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="sitoCompleto.html" class="back-link"><i class="fas fa-arrow-left"></i></a>
-            ROMAGNOLI LORENZO - 5BM - AS 24/25
-        </div>
+            <a href="area_umanistica.html" class="back-link"><i class="fas fa-arrow-left"></i></a> <!-- Freccia indietro -->
+ITALIANO        </div>
 
         <div class="grid">
-            <div class="grid-item">
-                <button onclick="location.href='area_umanistica_storia.html'">STORIA</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="location.href='area_umanistica_italiano.html'">ITALIANO</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="location.href='area_umanistica_inglese.html'">INGLESE</button>
-            </div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
         </div>
 
         <div class="footer-container">
