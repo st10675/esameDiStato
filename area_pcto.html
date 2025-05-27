@@ -8,38 +8,34 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            margin: 0;
         }
 
         .container {
             max-width: 900px;
             margin: 40px auto;
-            padding: 20px;
             background: #fff;
+            padding: 20px;
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            position: relative;
         }
 
         .header {
             font-size: 24px;
             font-weight: bold;
-            padding: 15px 0;
-            border-bottom: 3px solid #007BFF;
-            color: #007BFF;
             text-align: center;
+            color: #007BFF;
+            border-bottom: 3px solid #007BFF;
+            padding: 15px 0;
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .back-link {
             position: absolute;
             left: 20px;
+            top: 15px;
             font-size: 22px;
             color: #007BFF;
             text-decoration: none;
@@ -47,17 +43,16 @@
 
         .pptx-link {
             text-align: center;
-            margin-top: 30px;
-            margin-bottom: 10px;
+            margin: 30px 0 10px;
         }
 
         .pptx-link a {
-            color: #fff;
             background-color: #007BFF;
+            color: #fff;
             padding: 12px 20px;
-            text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
+            text-decoration: none;
             display: inline-block;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         }
@@ -69,40 +64,41 @@
         .grid {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 40px;
             padding: 30px 10px;
         }
 
         .grid-item {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            background-color: #fff;
-            border-radius: 12px;
+            gap: 30px;
+            background: #fff;
             padding: 20px;
+            border-radius: 12px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             border: 1px solid #e0e0e0;
         }
 
+        .grid-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
         .grid-item img {
             width: 300px;
-            height: auto;
             border-radius: 10px;
-            margin: 0 20px;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
 
         .grid-item p {
-            flex: 1;
             font-size: 16px;
-            padding: 0 15px;
+            flex: 1;
         }
 
         .video-section {
-            background-color: #fff;
-            border-radius: 12px;
+            background: #fff;
             padding: 30px;
             margin-top: 30px;
+            border-radius: 12px;
             text-align: center;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             border: 1px solid #e0e0e0;
@@ -121,42 +117,36 @@
         .video-wrapper video {
             width: 60%;
             max-width: 480px;
-            height: auto;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .footer-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            margin-top: 20px;
+            align-items: center;
+            margin-top: 40px;
             background-color: #fff;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e0e0e0;
         }
 
         .logo img {
             width: 300px;
-            height: auto;
         }
 
         .footer {
             font-size: 0.9em;
             text-align: right;
-            color: #333;
         }
 
         @media (max-width: 768px) {
             .grid-item {
-                flex-direction: column;
+                flex-direction: column !important;
             }
 
             .grid-item img {
                 width: 100%;
-                margin: 0 0 20px 0;
             }
 
             .footer-container {
@@ -165,7 +155,6 @@
             }
 
             .footer {
-                text-align: center;
                 margin-top: 15px;
             }
 
@@ -188,38 +177,47 @@
 
         <div class="grid">
             <div class="grid-item">
-                <p>Durante il mio percorso PCTO ho avuto l'opportunità di lavorare presso Loccioni, un'azienda all'avanguardia nel campo della misurazione industriale. L'ambiente di lavoro stimolante e la disponibilità dei tutor aziendali hanno reso l'esperienza altamente formativa. Ho potuto osservare da vicino come le competenze tecniche apprese a scuola trovino applicazione in contesti reali di produzione.</p>
-                <img src="img/loccioni1.jpg" alt="Loccioni azienda">
-            </div>
-
-            <!-- IMMAGINE A SINISTRA, TESTO A DESTRA -->
-            <div class="grid-item">
-                <img src="img/loccioni2.jpg" alt="Banco prova in costruzione">
-                <p>Insieme al mio gruppo di lavoro abbiamo partecipato alla progettazione e costruzione di un banco prova per testare gli iniettori delle automobili. Il mio compito principale era quello di contribuire allo sviluppo dell'applicazione web per la visualizzazione dei pezzi buoni e di scarto e di assistere il personale nella realizzazione del banco prova iniettori.</p>
+                <p>Durante il mio stage ho avuto la possibilità di collaborare con <strong>Loccioni</strong>, un’azienda innovativa che lavora nel campo dell’automazione e della misurazione. Fin da subito l’ambiente è stato stimolante e accogliente, e ho potuto vedere da vicino come si lavora in una vera realtà aziendale.</p>
+                <img src="img/loccioni1.jpg" alt="Ingresso azienda Loccioni">
             </div>
 
             <div class="grid-item">
-                <p>Il banco prova realizzato rappresenta il culmine del nostro lavoro, combinando precisione meccanica e controllo elettronico. Questa esperienza mi ha insegnato l'importanza del lavoro di squadra, della pianificazione e della risoluzione dei problemi. La soddisfazione di vedere il banco in funzione e produrre risultati concreti è stata impagabile.</p>
-                <img src="img/loccioni3.jpg" alt="Banco prova finito">
+                <p>Il progetto principale su cui ho lavorato era la realizzazione di un banco prova per testare gli iniettori delle automobili. È stato entusiasmante mettere in pratica conoscenze di elettronica e meccanica in un contesto concreto.</p>
+                <img src="img/loccioni2.jpg" alt="Costruzione banco prova">
+            </div>
+
+            <div class="grid-item">
+                <p>Alla fine abbiamo completato il banco prova, che univa precisione e tecnologia. Vedere il risultato finale funzionare davvero è stata una grande soddisfazione. Ci ha aiutato molto anche il confronto continuo con i tecnici dell’azienda.</p>
+                <img src="img/loccioni4.jpg" alt="Banco prova completo">
+            </div>
+
+            <div class="grid-item">
+                <p>Un momento molto particolare è stato l’ultimo giorno: abbiamo organizzato una visita guidata per amici e familiari, in cui noi studenti abbiamo raccontato il progetto e mostrato come funziona il banco prova. È stato bello condividere ciò che abbiamo fatto.</p>
+                <img src="img/loccioni3.jpg" alt="Visita guidata in azienda">
+            </div>
+
+            <div class="grid-item">
+                <p>Il bilancio di questa esperienza è davvero positivo. Ho imparato molto, non solo a livello tecnico ma anche umano: lavorare in gruppo, rispettare le scadenze e affrontare problemi reali. Se proprio dovessi trovare una difficoltà, è stato il poco tempo a disposizione... ma questo ci ha anche spinto a dare il massimo ogni giorno.</p>
+                <img src="img/loccioni5.jpg" alt="Foto gruppo di lavoro">
             </div>
         </div>
 
         <div class="video-section">
-            <h2>Video del Banco Prova Completato</h2>
+            <h2>Video del Banco Prova in azione</h2>
             <div class="video-wrapper">
                 <video controls>
                     <source src="img/videoLoccioni.mp4" type="video/mp4" />
-                    Il tuo browser non supporta il tag video.
+                    Il tuo browser non supporta il video.
                 </video>
             </div>
         </div>
 
         <div class="footer-container">
             <div class="logo">
-                <img src="img/logoScuola.png" alt="Logo IIS Marconi Pieralisi">
+                <img src="img/logoScuola.png" alt="Logo Scuola Marconi Pieralisi">
             </div>
             <div class="footer">
-                <p><strong>Indirizzo:</strong> Via Raffaello Sanzio, 8 - 60035 JESI (AN), Italy</p>
+                <p><strong>Indirizzo:</strong> Via Raffaello Sanzio, 8 - 60035 Jesi (AN)</p>
                 <p><strong>Telefono:</strong> +39 0731 204550</p>
             </div>
         </div>
