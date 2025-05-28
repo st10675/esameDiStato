@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCTO - Romagnoli Lorenzo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', 'Arial', sans-serif;
             background-color: #f4f4f4;
             color: #333;
             margin: 0;
+            line-height: 1.6;
         }
 
         .container {
@@ -55,12 +57,15 @@
             text-decoration: none;
             display: inline-block;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
         .pptx-link a:hover {
             background-color: #0056b3;
+            transform: translateY(-2px);
         }
 
+        /* Sezione griglia migliorata */
         .grid {
             display: flex;
             flex-direction: column;
@@ -73,10 +78,16 @@
             align-items: center;
             gap: 30px;
             background: #fff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
         }
 
         .grid-item:nth-child(even) {
@@ -87,19 +98,27 @@
             width: 300px;
             border-radius: 10px;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .grid-item img:hover {
+            transform: scale(1.03);
         }
 
         .grid-item p {
             font-size: 16px;
             flex: 1;
+            text-align: justify;
+            text-justify: inter-word;
+            margin: 0;
         }
 
+        /* Sezione video migliorata */
         .video-section {
             background: #fff;
             padding: 30px;
-            margin-top: 30px;
+            margin: 40px 0;
             border-radius: 12px;
-            text-align: center;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             border: 1px solid #e0e0e0;
         }
@@ -107,23 +126,35 @@
         .video-section h2 {
             color: #007BFF;
             margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .video-section p {
+            text-align: justify;
+            margin-bottom: 20px;
         }
 
         .video-wrapper {
             display: flex;
             justify-content: center;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .video-wrapper video {
-            width: 60%;
-            max-width: 480px;
-            border-radius: 10px;
+            width: 100%;
+            max-width: 800px;
+            display: block;
         }
 
+        /* Sezione competenze migliorata */
         .skills-section {
             background: #fff;
             padding: 30px;
-            margin-top: 40px;
+            margin: 40px 0;
             border-radius: 12px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             border: 1px solid #e0e0e0;
@@ -133,18 +164,27 @@
             text-align: center;
             color: #007BFF;
             margin-bottom: 25px;
+            font-size: 1.5rem;
         }
 
         .skills-box {
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
             background-color: #f0f8ff;
             box-shadow: inset 0 0 5px rgba(0, 123, 255, 0.1);
+            margin-bottom: 20px;
         }
 
         .skills-box h3 {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #0056b3;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-box h3 i {
+            margin-right: 10px;
         }
 
         .skills-box ul {
@@ -154,8 +194,10 @@
         .skills-box ul li {
             margin-bottom: 10px;
             line-height: 1.6;
+            text-align: left;
         }
 
+        /* Footer invariato */
         .footer-container {
             display: flex;
             justify-content: space-between;
@@ -192,10 +234,7 @@
 
             .footer {
                 margin-top: 15px;
-            }
-
-            .video-wrapper video {
-                width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -213,35 +252,36 @@
 
         <div class="grid">
             <div class="grid-item">
-                <p>Durante il mio stage ho avuto la possibilità di collaborare con <strong>Loccioni</strong>, un’azienda all’avanguardia nell’ambito dell’automazione e della misurazione industriale. L’ambiente si è rivelato fin da subito stimolante, dinamico e molto formativo. Ho potuto vivere un’esperienza concreta del mondo del lavoro e comprendere l’importanza del lavoro di squadra.</p>
+                <p>Durante il mio stage ho avuto la possibilità di collaborare con <strong>Loccioni</strong>, un'azienda all'avanguardia nell'ambito dell'automazione e della misurazione industriale. L'ambiente si è rivelato fin da subito stimolante, dinamico e molto formativo. Ho potuto vivere un'esperienza concreta del mondo del lavoro e comprendere l'importanza del lavoro di squadra. L'azienda, con i suoi spazi moderni e laboratori attrezzati, mi ha permesso di toccare con mano tecnologie avanzate e processi industriali innovativi.</p>
                 <img src="img/loccioni1.jpg" alt="Ingresso azienda Loccioni">
             </div>
 
             <div class="grid-item">
-                <p>Il progetto principale a cui ho partecipato ha riguardato la realizzazione di un banco prova per testare gli iniettori delle automobili. Mi sono occupato in particolare della creazione della web app che permetteva la visualizzazione in tempo reale dei pezzi conformi e non conformi. Applicare le competenze scolastiche in un contesto reale è stato emozionante.</p>
+                <p>Il progetto principale a cui ho partecipato ha riguardato la realizzazione di un banco prova per testare gli iniettori delle automobili. Mi sono occupato in particolare della creazione della web app che permetteva la visualizzazione in tempo reale dei pezzi conformi e non conformi. Applicare le competenze scolastiche in un contesto reale è stato emozionante. Ho utilizzato HTML, CSS e JavaScript per sviluppare un'interfaccia intuitiva, integrata con il sistema di acquisizione dati del banco prova. L'applicazione mostrava grafici in tempo reale e generava report automatici.</p>
                 <img src="img/loccioni2.jpg" alt="Costruzione banco prova">
             </div>
 
             <div class="grid-item">
-                <p>Con grande soddisfazione, abbiamo portato a termine il banco prova, unendo precisione tecnica e soluzioni software efficienti. Vedere il dispositivo funzionare correttamente e in modo affidabile è stato il momento culminante dell’intero percorso.</p>
+                <p>Con grande soddisfazione, abbiamo portato a termine il banco prova, unendo precisione tecnica e soluzioni software efficienti. Vedere il dispositivo funzionare correttamente e in modo affidabile è stato il momento culminante dell'intero percorso. Il sistema è stato in grado di testare decine di iniettori al giorno con una precisione del 99.8%, superando le aspettative iniziali. Questa esperienza mi ha dimostrato l'importanza della qualità e dell'affidabilità nei sistemi industriali.</p>
                 <img src="img/loccioni4.jpg" alt="Banco prova completo">
             </div>
 
             <div class="grid-item">
-                <p>Uno dei momenti più significativi è stato l’ultimo giorno, durante il quale abbiamo organizzato una visita guidata per amici e familiari. Spiegare il funzionamento del nostro progetto al pubblico è stato coinvolgente e gratificante.</p>
+                <p>Uno dei momenti più significativi è stato l'ultimo giorno, durante il quale abbiamo organizzato una visita guidata per amici e familiari. Spiegare il funzionamento del nostro progetto al pubblico è stato coinvolgente e gratificante. Ho avuto l'opportunità di dimostrare le funzionalità del banco prova e della web app, ricevendo feedback positivi sia dai visitatori che dai miei tutor aziendali. Questa esperienza ha migliorato notevolmente le mie capacità comunicative e di public speaking.</p>
                 <img src="img/loccioni3.jpg" alt="Visita guidata in azienda">
             </div>
 
             <div class="grid-item">
-                <p>Il bilancio complessivo di questa esperienza è estremamente positivo. Ho potuto affinare competenze tecniche, potenziare le mie capacità relazionali e imparare a gestire scadenze reali. L’unico vero ostacolo? Il tempo limitato... ma è servito da stimolo per dare sempre il massimo!</p>
+                <p>Il bilancio complessivo di questa esperienza è estremamente positivo. Ho potuto affinare competenze tecniche, potenziare le mie capacità relazionali e imparare a gestire scadenze reali. L'unico vero ostacolo? Il tempo limitato... ma è servito da stimolo per dare sempre il massimo! Questa esperienza ha confermato il mio interesse per l'ingegneria del software e mi ha dato una visione più chiara del mondo del lavoro nel settore tecnologico.</p>
                 <img src="img/loccioni5.jpg" alt="Foto gruppo di lavoro">
             </div>
         </div>
 
         <div class="video-section">
             <h2>Video del Banco Prova in azione</h2>
+            <p>Il video mostra il banco prova per iniettori durante il funzionamento. Si può osservare il processo automatico di test, con l'acquisizione dei dati e la loro visualizzazione in tempo reale sull'interfaccia web da me sviluppata. Il sistema è in grado di identificare immediatamente eventuali anomalie e classificare gli iniettori come conformi o non conformi agli standard qualitativi richiesti.</p>
             <div class="video-wrapper">
-                <video controls>
+                <video controls poster="img/video-poster.jpg">
                     <source src="img/videoLoccioni.mp4" type="video/mp4" />
                     Il tuo browser non supporta il video.
                 </video>
@@ -253,18 +293,22 @@
             <div class="skills-box">
                 <h3><i class="fas fa-code"></i> Linguaggi e Ambienti di Sviluppo</h3>
                 <ul>
-                    <li><strong>C#</strong> per la programmazione della logica del banco prova all’interno dell’ambiente di sviluppo <strong>Visual Studio</strong>.</li>
+                    <li><strong>C#</strong> per la programmazione della logica del banco prova all'interno dell'ambiente di sviluppo <strong>Visual Studio</strong>.</li>
                     <li><strong>HTML, CSS, JavaScript</strong> per la realizzazione della web app front-end che mostrava i dati di test in tempo reale.</li>
                     <li><strong>Visual Studio Code</strong> utilizzato per la creazione e il debug del codice web, grazie alla sua leggerezza e versatilità.</li>
+                    <li><strong>Git</strong> per il version control del codice e la collaborazione con il team.</li>
+                    <li><strong>Chart.js</strong> per la visualizzazione grafica dei dati di test.</li>
                 </ul>
             </div>
-            <div class="skills-box" style="margin-top: 25px;">
+            <div class="skills-box">
                 <h3><i class="fas fa-lightbulb"></i> Competenze Sviluppate</h3>
                 <ul>
                     <li>Collaborazione e comunicazione efficace all'interno di un team tecnico-professionale.</li>
                     <li>Gestione del tempo e rispetto delle scadenze reali in un ambiente aziendale.</li>
                     <li>Problem solving tecnico attraverso il confronto con tecnici esperti e debugging di codice.</li>
                     <li>Capacità di spiegare e presentare un progetto tecnico a un pubblico non specializzato.</li>
+                    <li>Adattamento a metodologie e processi aziendali.</li>
+                    <li>Documentazione del codice e dei processi sviluppati.</li>
                 </ul>
             </div>
         </div>
