@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -31,21 +31,30 @@
       padding: 15px 0;
       border-bottom: 3px solid #007BFF;
       color: #007BFF;
-      text-align: center;
-      position: relative;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .back-link {
-      position: absolute;
-      left: 20px;
       font-size: 22px;
       color: #007BFF;
       text-decoration: none;
+      width: 50px;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 5px;
     }
 
+    .header-title {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    /* Sezioni migliorate */
     .section-title,
     .mario-title {
       font-size: 22px;
@@ -172,6 +181,29 @@
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
     }
 
+    .help-desk {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 30px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #007BFF;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .help-desk:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .help-desk p {
+      text-align: justify;
+      margin: 0;
+      line-height: 1.6;
+      color: #444;
+      font-size: 15px;
+    }
+
     .video-container {
       margin: 30px 0;
       position: relative;
@@ -187,6 +219,7 @@
       background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.3), transparent);
     }
 
+    /* Footer container rimane invariato */
     .footer-container {
       display: flex;
       align-items: center;
@@ -224,7 +257,8 @@
   <div class="container">
     <div class="header">
       <a href="area_professionale.html" class="back-link"><i class="fas fa-arrow-left"></i></a>
-      INFORMATICA
+      <div class="header-title">INFORMATICA</div>
+      <div style="width:50px"></div>
     </div>
 
     <div class="section-title">Esercizio PHP + MyAdmin</div>
@@ -251,7 +285,6 @@
         </video>
       </div>
     </div>
-
     <br>
     <div class="video-container">
       <div class="mario-title">Prenotazione Campi</div>
@@ -259,15 +292,11 @@
         <source src="img/PrenotazioneCampi_Cerioni-Romagnoli.mp4" type="video/mp4" />
       </video>
     </div>
-
     <br>
     <div class="video-container">
       <div class="mario-title">Help Desk</div>
       <p style="text-align: justify;">
-        Il progetto <strong>Help Desk</strong> è stato ideato per migliorare e digitalizzare la gestione delle richieste di supporto tecnico all'interno di un'organizzazione, come una scuola o un'azienda. Utilizzando un sistema di ticketing accessibile tramite interfaccia web, ogni segnalazione effettuata dagli utenti viene automaticamente convertita in un ticket tracciabile. Questo approccio consente una gestione ordinata delle richieste, evitando sovrapposizioni e dimenticanze. I ticket possono essere assegnati a specifici operatori o responsabili, monitorati nel tempo e arricchiti con commenti, allegati e aggiornamenti sullo stato di avanzamento.
-      </p>
-      <p style="text-align: justify;">
-        Il sistema comprende funzionalità avanzate come la gestione degli utenti con diversi livelli di accesso, la classificazione dei ticket in base a categorie o ambiti di competenza e la presenza di una sezione FAQ per fornire risposte rapide ai problemi più comuni. L'obiettivo principale è ottimizzare il flusso di comunicazione tra utenti e tecnici, ridurre i tempi di risposta e migliorare la qualità complessiva del servizio di assistenza. Inoltre, è possibile ottenere statistiche sull'efficienza del servizio, come il numero di ticket risolti, il tempo medio di risposta o i problemi più ricorrenti, permettendo così un costante miglioramento del processo di supporto.
+        Il progetto Help Desk ha l'obiettivo di facilitare la gestione delle richieste di assistenza tecnica tramite un sistema di ticketing accessibile via web. Gli utenti possono segnalare i problemi attraverso un modulo online o altri canali, e ogni richiesta viene trasformata in un ticket gestito da responsabili e operatori. Il sistema consente di monitorare lo stato dei ticket, assegnare attività, registrare commenti e garantire la tracciabilità di ogni intervento. Include anche FAQ, gestione utenti e ambiti per ottimizzare l'organizzazione e la risoluzione dei problemi.
       </p>
     </div>
 
@@ -277,39 +306,42 @@
       </div>
       <div class="footer">
         <p><strong>Indirizzo:</strong> Via Raffaello Sanzio, 8 - 60035 JESI (AN), Italy</p>
-        <p><strong>Telefono:</strong> +39 0731 204550</p>
+        <p><strong>Telefono:</strong> +39 0731 1234567</p>
+        <p><strong>Email:</strong> info@iis-marconi-pieralisi.it</p>
       </div>
     </div>
   </div>
 
   <script>
     const images = [
-      { src: "img/inf1.png", desc: "1) Tabella popolata da database" },
-      { src: "img/inf2.png", desc: "2) Premuto tasto modifica di piadina" },
-      { src: "img/inf3.png", desc: "3) Cambio prosciutto crudo in cotto e clicco salva" },
-      { src: "img/inf4.png", desc: "4) Il databse si aggiorna e mostra la tabella" },
-      { src: "img/inf5.png", desc: "5) Clicco il bottone elimina di piadina" },
-      { src: "img/inf6.png", desc: "6) Ricerco e mi mostra i record contenenti la stringa inserita" },
+      { src: 'img/inf1.png', description: '1) Tabella popolata da database' },
+      { src: 'img/inf2.png', description: '2) Inserimento dati via form' },
+      { src: 'img/inf3.png', description: '3) Form di prenotazione campi' },
+      { src: 'img/inf4.png', description: '4) Pagina di ricerca' }
     ];
 
-    let current = 0;
-    const imgElement = document.getElementById("carousel-image");
-    const descElement = document.getElementById("carousel-description");
+    let currentIndex = 0;
 
-    function updateSlide() {
-      imgElement.src = images[current].src;
-      descElement.textContent = images[current].desc;
-    }
-
-    function nextSlide() {
-      current = (current + 1) % images.length;
-      updateSlide();
+    function updateCarousel() {
+      const imgElement = document.getElementById('carousel-image');
+      const descElement = document.getElementById('carousel-description');
+      imgElement.src = images[currentIndex].src;
+      imgElement.alt = images[currentIndex].description;
+      descElement.textContent = images[currentIndex].description;
     }
 
     function prevSlide() {
-      current = (current - 1 + images.length) % images.length;
-      updateSlide();
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateCarousel();
     }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateCarousel();
+    }
+
+    // Inizializza carousel
+    updateCarousel();
   </script>
 </body>
 </html>
