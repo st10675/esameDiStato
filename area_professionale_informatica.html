@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -217,6 +217,24 @@
       font-size: 15px;
     }
 
+    .helpdesk-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007BFF;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+
+    .helpdesk-button:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
     .footer-container {
       display: flex;
       align-items: center;
@@ -293,6 +311,11 @@
       <p>
         Il progetto Help Desk ha l'obiettivo di facilitare la gestione delle richieste di assistenza tecnica tramite un sistema di ticketing accessibile via web. Gli utenti possono segnalare i problemi attraverso un modulo online o altri canali, e ogni richiesta viene trasformata in un ticket gestito da responsabili e operatori. Il sistema consente di monitorare lo stato dei ticket, assegnare attività, registrare commenti e garantire la tracciabilità di ogni intervento. Include anche FAQ, gestione utenti e ambiti per ottimizzare l'organizzazione e la risoluzione dei problemi.
       </p>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://helpdesk.sviluppo.host/login.php" target="_blank" class="helpdesk-button">
+          Accedi al Sistema Help Desk
+        </a>
+      </div>
     </div>
 
     <div class="footer-container">
@@ -308,34 +331,37 @@
   </div>
 
   <script>
-    const images = [
-      { src: 'img/inf1.png', description: '1) Tabella popolata da database' },
-      { src: 'img/inf2.png', description: '2) Inserimento dati via form' },
-      { src: 'img/inf3.png', description: '3) Form di prenotazione campi' },
-      { src: 'img/inf4.png', description: '4) Pagina di ricerca' }
-    ];
+  const images = [
+    { src: 'img/inf1.png', description: '1) Tabella popolata da database' },
+    { src: 'img/inf2.png', description: '2) Clicco modifica su piadina' },
+    { src: 'img/inf3.png', description: '3) Cambio crudo con cotto e salvo' },
+    { src: 'img/inf4.png', description: '4) Elimino la piadina' },
+    { src: 'img/inf5.png', description: '5) La tabella si aggiorna automaticamente' },
+    { src: 'img/inf6.png', description: '6) Cerco sal' }
+  ];
 
-    let currentIndex = 0;
+  let currentIndex = 0;
 
-    function updateCarousel() {
-      const imgElement = document.getElementById('carousel-image');
-      const descElement = document.getElementById('carousel-description');
-      imgElement.src = images[currentIndex].src;
-      imgElement.alt = images[currentIndex].description;
-      descElement.textContent = images[currentIndex].description;
-    }
+  function updateCarousel() {
+    const imgElement = document.getElementById('carousel-image');
+    const descElement = document.getElementById('carousel-description');
+    imgElement.src = images[currentIndex].src;
+    imgElement.alt = images[currentIndex].description;
+    descElement.textContent = images[currentIndex].description;
+  }
 
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      updateCarousel();
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % images.length;
-      updateCarousel();
-    }
-
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateCarousel();
-  </script>
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+  }
+
+  updateCarousel();
+</script>
+
 </body>
 </html>
