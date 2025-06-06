@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -119,15 +119,14 @@
       }
     }
 
-    /* Stile per le immagini dei progetti adattate */
     .project-image {
       width: 100%;
-      max-height: 140px; /* Altezza massima ridotta per migliore integrazione */
-      object-fit: contain; /* Mantiene tutta l’immagine senza tagliare */
+      max-height: 140px;
+      object-fit: contain;
       border-radius: 10px;
       margin: 15px 0;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      background-color: #fff; /* Sfondo bianco per immagini con trasparenza */
+      background-color: #fff;
       padding: 8px;
     }
   </style>
@@ -139,7 +138,6 @@
       IA
     </div>
 
-    <!-- Paragrafo introduttivo -->
     <p style="padding: 20px; font-size: 1.05em; text-align: justify;">
       In questa pagina sono presentati due progetti realizzati con <strong>Google Colab</strong>, una piattaforma online che permette di scrivere ed eseguire codice Python direttamente nel browser. I progetti utilizzano dataset reali per analizzare i dati e costruire modelli di <em>machine learning</em>, come la regressione e la classificazione, in modo semplice e interattivo.
     </p>
@@ -158,6 +156,16 @@
         <img src="img/ia2.png" alt="IA2 Image" class="project-image" />
         <a href="https://colab.research.google.com/drive/1dMly_WJdZMrJeg0d5nY585GsrzLw52W6#scrollTo=c49X2gMcXtBV" target="_blank">Visualizza progetto</a>
       </div>
+
+      <div class="grid-item">
+  <h2>Fashion MNIST dataset</h2>
+  <p style="text-align: justify;">
+    Questo progetto utilizza una rete neurale convoluzionale (CNN) per classificare immagini di capi d’abbigliamento presenti nel dataset Fashion MNIST, composto da immagini 28x28 in scala di grigi. Dopo aver caricato e normalizzato i dati, il modello viene costruito con layer convoluzionali e addestrato per 10 epoche. L’accuratezza viene poi valutata sul test set, raggiungendo circa il 91%. Infine, vengono generate visualizzazioni per monitorare l’andamento della loss e dell’accuracy nel tempo, oltre a una matrice di confusione e un report di classificazione per analizzare le prestazioni per ciascuna classe.
+  </p>
+  <img src="img/ia3.png" alt="IA3 Image" class="project-image" />
+  <a href="https://colab.research.google.com/drive/1slZU6ssHO_k4rmzffMrgV89YRa2eqOUN" target="_blank">Visualizza progetto</a>
+</div>
+
     </div>
 
     <div class="footer-container">
